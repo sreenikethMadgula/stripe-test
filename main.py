@@ -121,7 +121,7 @@ async def webhook(request: Request):
         payment_intent = event.data.object
         print("payment_intent",payment_intent)
 
-    if event_type == 'payment_intent.succeeded':
+    elif event_type == 'payment_intent.succeeded':
         print("\n\n\nPayment Succeeded!!")
         payment_intent = event.data.object
         print("payment_intent", payment_intent)
